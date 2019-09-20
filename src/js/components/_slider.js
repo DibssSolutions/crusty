@@ -5,7 +5,7 @@ slider.slick({
   dots: false,
   arrows: true,
   // infinite: false,
-  speed: 0,
+  speed: 600,
   slidesToShow: 1,
   slideToScroll: 1,
   autoplay: false,
