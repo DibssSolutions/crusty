@@ -1,0 +1,15 @@
+<svg width="1128" height="740" viewBox="0 0 1128 740" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Lines
+    </title>
+    <g fill="#FFF" fill-rule="evenodd" opacity=".1">
+        <path d="M644 0h1v740h-1z"/>
+        <path d="M805 0h1v740h-1z"/>
+        <path d="M966 0h1v740h-1z"/>
+        <path d="M1127 0h1v740h-1z"/>
+        <path d="M483 0h1v740h-1z"/>
+        <path d="M322 0h1v740h-1z"/>
+        <path d="M161 0h1v740h-1z"/>
+        <path d="M0 0h1v740H0z"/>
+    </g>
+</svg>
