@@ -1,50 +1,33 @@
 ---
 title: Index page
+class: is-main
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
-	
-	{# partial example #}
 	{% include "partials/_header.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# checkbox exepmle #}
-	<p>{{ mixins.checkbox() }}</p>
-	<p>
-		{{ mixins.checkbox({
-			checked: true,
-			name: 'exemple-name',
-			text: 'checkbox-checked'
-		}) }}
-	</p>
-	{# radio exepmle #}
-	{{ mixins.checkbox({
-		name: 'exemple-name',
-		text: 'text',
-		radio: true
-	}) }}
-	
-
-	{# breadcrumbs exepmle #}
-	{{ mixins.breadcrumbs({
-		list: ['Главная','Внутренняя','Корзина']
-	}) }}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
+	<!-- begin slider -->
+	<div class="slider js-slider" data-scroll-trigger>
+		{% for i in range(0,2) %}
+		<div class="slider__slide" data-anim-group="0.2" data-duration-anim="0.6" data-delay-anim="0.15" data-ease-anim="Power2.easeOut">
+			<div class="slider__slide-wrap">
+				<div class="slider__img">
+					<img src="./img/main-img.jpg" alt="img">
+				</div>
+				<div class="slider__elements">
+					<img src="./img/elements.svg" alt="img" data-anim="fade">
+				</div>
+				<div class="slider__inner">
+					<h2 class="title-lg"><span data-anim="from-bottom">CrustyCrust Crafting Quality Pizza {{loop.index}}</span></h2>
+					<div class="slider__footer">
+						<a href="#" class="btn" data-anim="from-bottom">CHECK OUR MENU</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		{% endfor %}
-	{# end of example #}
+	</div>
+	<!-- end slider -->
 
 {% endblock %}

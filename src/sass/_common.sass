@@ -1,4 +1,48 @@
 body
+	+fap
+	+f(14px,400,2)
+	color: #46362E
+	+font-smoothing
+	min-width: 320px
 	background: #FFF
-	line-height: 1.4
+	+fadeout(.6s)
+	&.is-main
+		overflow: hidden
+		+md
+			overflow: auto
+	&.is-loaded
+		+fadein
+	+md
+		font-size: 12px
+		line-height: 1.82
 
+.title-lg
+	+ffo
+	+f(72px,400,1.29)
+	+css-lock(2,6,375,1440,'letter-spacing')
+	+md
+		+css-lock(26,72,375,1023)
+	span
+		display: block
+.title
+	+ffo
+	+f(60px,400,1)
+	+css-lock(2,6,375,1440,'letter-spacing')
+	+md
+		+css-lock(26,60,375,1023)
+	span
+		display: block
+.btn
+	padding: 23px 40px
+	color: #fff
+	+fap
+	+f(14px,700,1)
+	vertical-align: top
+	background-color: #DA4A48
+	transition: background-color .3s
+	display: inline-block
+	+md
+		padding: 19px 27px
+		font-size: 12px
+	+hover
+		background-color: darken(#DA4A48, 15%)

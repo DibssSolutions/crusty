@@ -1,0 +1,33 @@
+---
+title: Menu
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{{ mixins.topic({
+		img: "menu-img",
+		title: "Menu"
+	}) }}
+	<div class="wrap">
+		<div class="inner">
+			<!-- begin menus -->
+			<div class="menus" data-scroll-trigger>
+				<div class="menus__row row" data-anim-group="0.2" data-duration-anim="0.6" data-delay-anim="0.15" data-ease-anim="Power2.easeOut">
+					{% for i in range(0,9) %}
+					<div class="menus__col col col-4 col-md-6" data-anim="from-bottom">
+						<div class="menu">
+							<h4 class="menu__title">Capricciosa</h4>
+							<p>Pomodoro, mozzarella, prosciutto, funghi, carciofi, capperi, 1 oliva, origano, emmenthal</p>
+							<div class="menu__price">6.99</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<!-- end menus -->
+		</div>
+	</div>
+
+{% endblock %}

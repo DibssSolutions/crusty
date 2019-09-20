@@ -1,0 +1,59 @@
+---
+title: Contacts
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{{ mixins.topic({
+		img: "contact",
+		title: "Contact"
+	}) }}
+	<div class="wrap">
+		<div class="inner">
+			<!-- begin contacts -->
+			<div class="contacts" data-scroll-trigger>
+				<div class="contacts__row row" data-anim-group="0.2" data-duration-anim="0.6" data-delay-anim="0.15" data-ease-anim="Power2.easeOut">
+					{% for item in [{
+						icon: 'catering',
+						title: 'Catering',
+						text: "<p>Did you know we cater?</p><p>Click here to find out more or contact us!</p>",
+						email: 'catering@mandys.ca',
+						phone: '514-227-1640'
+					},
+					{
+						icon: 'careers',
+						title: 'Careers',
+						text: "<p>Do you want to be a part of the MANDY’S team?</p><p>Reach out!</p>",
+						email: 'catering@mandys.ca',
+						phone: '514-227-1640'
+					},
+					{
+						icon: 'general',
+						title: 'General',
+						text: "<p>Do you have any general questions or inquiries?</p><p>Let us know!</p>",
+						email: 'catering@mandys.ca',
+						phone: '514-227-1640'
+					}] %}
+					<div class="contacts__col col col-4 col-sm-12" data-anim="from-bottom">
+						<div class="contact">
+							<div class="contact__icon"><img src="./img/contact-icon-{{loop.index}}.svg" alt="img"></div>
+							<h4 class="contact__title">{{ item.title }}</h4>
+							<div class="contact__text">
+								{{ item.text | safe }}
+							</div>
+							<div class="contact__email">
+								<a href="mailto:{{ item.email }}">{{ item.email }}</a>
+							</div>
+							<div class="contact__phone"><a href="tel:{{ item.phone }}">{{ item.phone }}</a></div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<!-- end contacts -->
+		</div>
+	</div>
+
+{% endblock %}

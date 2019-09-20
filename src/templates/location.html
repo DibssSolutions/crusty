@@ -1,0 +1,58 @@
+---
+title: Location
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{{ mixins.topic({
+		img: "location",
+		title: "Location"
+	}) }}
+	<div class="wrap">
+		<div class="inner" data-scroll-trigger>
+			<!-- begin locations -->
+			<div class="locations" data-anim-group="0.2" data-duration-anim="0.6" data-delay-anim="0.15" data-ease-anim="Power2.easeOut">
+				{% for i in range(0,3) %}
+				    <!-- begin location -->
+				    <div class="location" data-anim="from-bottom">
+				    	<div class="location__img"><img src="./img/location-item.jpg" alt="img"></div>
+				    	<div class="location__wrap">
+				    		<h4 class="location__title">Old port</h4>
+				    		<div class="location__address">425 Rue St Nicolas</div>
+				    		<div class="location__row row">
+				    			<div class="location__col col col-6">
+				    				<div class="location__item">
+				    					<p>Monday - Wednesday:</p>
+				    					<p>11:00 AM - 9:30 PM</p>
+				    				</div>
+				    				<div class="location__item">
+				    					<p>Saturday:</p>
+				    					<p>11:00 AM - 10:00 PM</p>
+				    				</div>
+				    			</div>
+				    			<div class="location__col col col-6">
+				    				<div class="location__item">
+				    					<p>Thursday - Friday:</p>
+				    					<p>11:00 AM - 10:30 PM</p>
+				    				</div>
+				    				<div class="location__item">
+				    					<p>Sunday:</p>
+				    					<p>12:00 PM - 8:00 PM</p>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<div class="location__number">
+				    			<a href="tel:">514-379-1979</a>
+				    		</div>
+				    	</div>
+				    </div>
+				    <!-- end location -->
+				{% endfor %}
+			</div>
+			<!-- end locations -->
+		</div>
+	</div>
+
+{% endblock %}
