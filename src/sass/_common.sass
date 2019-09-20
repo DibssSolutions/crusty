@@ -1,3 +1,7 @@
+html.is-overflow-hidden
+	overflow-y: scroll
+
+	
 body
 	+fap
 	+f(14px,400,2)
@@ -12,6 +16,10 @@ body
 			overflow: auto
 	&.is-loaded
 		+fadein
+	.is-open-menu &,
+	.is-overflow-hidden &
+		position: fixed
+		width: 100%
 	+md
 		font-size: 12px
 		line-height: 1.82

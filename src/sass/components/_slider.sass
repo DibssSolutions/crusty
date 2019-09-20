@@ -32,15 +32,6 @@
 	&__slide
 		position: relative
 		overflow: hidden
-	&__slide-wrap
-		position: relative
-		min-height: calc(100vh - 160px)
-		align-items: center
-		justify-content: center
-		text-align: center
-		display: flex
-		+md
-			min-height: calc(100vh - 104px)
 		&:before
 			position: absolute
 			content: ''
@@ -55,6 +46,15 @@
 			background-size: auto 100%
 			+md
 				display: none
+	&__slide-wrap
+		position: relative
+		min-height: calc(100vh - 160px)
+		align-items: center
+		justify-content: center
+		text-align: center
+		display: flex
+		+md
+			min-height: calc(100vh - 104px)
 	&__img
 		position: absolute
 		top: 0
